@@ -20,6 +20,7 @@ function fish_hook_enable
 
     set hook_function_path (fish_hook_function_path $hook)
     set hook_completion_path (fish_hook_completion_path $hook)
+    set hook_initializer_path (fish_hook_initializer_path $hook)
 
     if test -f $function_path
       if not contains $hook_function_path $fish_function_path
@@ -33,6 +34,9 @@ function fish_hook_enable
       end
     end
 
+    if test -f $hook_initializer_path
+      . $hook_initializer_path
+    end
 
     set --global --export fish_hook_enabled_hooks $hook $fish_hook_enabled_hooks
   end
