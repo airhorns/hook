@@ -14,23 +14,22 @@ function fish_hook_enable
       continue
     end
 
-    if contains $hook $fish_hook_enabled_hooks
-      continue
-    end
-
     set hook_function_path (fish_hook_function_path $hook)
-    set hook_completion_path (fish_hook_completion_path $hook)
+    set hook_complete_path (fish_hook_complete_path $hook)
     set hook_initializer_path (fish_hook_initializer_path $hook)
 
-    if test -f $function_path
+    if test -d $function_path
       if not contains $hook_function_path $fish_function_path
         set fish_function_path $fish_function_path $hook_function_path
       end
     end
 
-    if test -f $hook_completion_path
-      if not contains $hook_completion_path $fish_completion_path
-        set fish_complete_path $fish_completion_path $hook_completion_path
+    if contains $hook_complete_path $fish_complete_path
+    end
+
+    if test -d $hook_complete_path
+      if not contains $hook_complete_path $fish_complete_path
+        set fish_complete_path $fish_complete_path $hook_complete_path
       end
     end
 
