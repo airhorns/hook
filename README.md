@@ -74,6 +74,10 @@ Automatically includes homebrew's included fish completions if they exist.
 
 Right now, just adds an err_echo function, which echos to stderr. Handy for debugging fish scripts and completions.
 
+#### git
+
+Adds in a slimmer, less correct version of the `__git_ps1` function included in git's built in bash completions.
+
 #### ln
 
 Adds completions for the dastardly hard-to-remember `ln` syntax.
