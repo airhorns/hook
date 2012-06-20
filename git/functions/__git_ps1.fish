@@ -45,7 +45,7 @@ function __git_ps1
       if git rev-parse --quiet --verify HEAD >/dev/null
         git diff-index --cached --quiet HEAD --; or set i "+"
       else
-        i="#"
+        set i "#"
       end
     end
     if not test $argv
