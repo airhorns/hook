@@ -1,8 +1,8 @@
 function autojump_preexec
-  if test $AUTOJUMP_KEEP_SYMLINKS == "1"
+  if test "1" = $AUTOJUMP_KEEP_SYMLINKS
     set --local pwd_args ""
   else
     set --local pwd_args "-P"
   end
-  autojump -a (pwd $pwd_args); and echo "done"
+  autojump -a (pwd $pwd_args)
 end
