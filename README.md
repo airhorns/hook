@@ -4,10 +4,10 @@ Reel in your crazy wild fish configurations into this community supported fish s
 
 ### Installation
 
-Clone this repo somewhere. A good place to put it might be in `~/config/fish/hook`.
+Clone this repo somewhere. A good place to put it might be in `~/.config/fish/hook`.
 
 ```
-⇒  git clone https://github.com/hornairs/hook ~/config/fish/hook
+⇒  git clone https://github.com/hornairs/hook ~/.config/fish/hook
 ```
 
 -----
@@ -21,7 +21,7 @@ Then, source the `hook.fish` file from the root of the repo. The relevant line o
 One liner:
 
 ```
-⇒  echo `. ~/config/fish/hook/hook.fish` >> ~/config/fish/config.fish
+⇒  echo `. ~/.config/fish/hook/hook.fish` >> ~/.config/fish/config.fish
 ```
 
 -----
@@ -45,7 +45,7 @@ autojump
 A one liner to enable all hooks:
 
 ```
-echo `fish_hook_enable (fish_hook_list_available_hooks)` >> ~/config/fish/config.fish
+echo `fish_hook_enable (fish_hook_list_available_hooks)` >> ~/.config/fish/config.fish
 ```
 
 
